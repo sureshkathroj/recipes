@@ -15,6 +15,13 @@
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Starter
+                  <div *ngFor="let product of item.NorthIndian">
+                    <div *ngFor="let ind of product.starter">
+                      <span>{{ind.dishName}}</span>
+                    <span>{{ind.price}}</span>
+                    </div>
+                  </div>
+
               </mat-panel-title>
               
             </mat-expansion-panel-header>

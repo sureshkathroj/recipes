@@ -42,5 +42,12 @@
         }
       ]
     }
+  ],
+  "favorites": [
+    {
+      "id": "1008", 
+      "dishName": "Dahi vada",
+      "imgPath":"https://images.unsplash.com/photo-1580376259289-d9c7bee8beaf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fHN0YXJ0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60", "description": " popular North Indian street food snack where lentil dumplings are dunked in a creamy whipped yogurt topped with spicy and sweet chutneys. Dahi bhalla are slightly different from dahi vada. In dahi bhalle, papdis, boiled potato cubes & cooked chickpeas are added which add different textures, taste and flavor to the dahi bhalla."
+    }
   ]
 }

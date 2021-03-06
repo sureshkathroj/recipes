@@ -1,0 +1,11 @@
+.navbar{
+    justify-content: space-between;
+}
+mat-icon{
+    vertical-align: middle;
+    margin-right: 0.3rem;
+}
+a {
+    color: #fefefe;
+    text-decoration: none;
+  }

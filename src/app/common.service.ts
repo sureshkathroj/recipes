@@ -7,10 +7,17 @@ import {Favourites} from './favourites';
 })
 export class CommonService {
 
-  constructor(private http:HttpClient) { }
-
+  constructor(private  http: HttpClient) { }
   baseURL = 'http://localhost:3000/'
+
+  getRecipe(id){
+    return this.http.get(`${this.baseURL}recipes/${id}`)
+
+  }
  
+  getAllRecipes(){
+    return this.http.get(`${this.baseURL}recipes`)
+  }
 
   getFavourites(): Observable<Favourites[]>{
     return this.http.get<Favourites[]>(`${this.baseURL}favorites`);

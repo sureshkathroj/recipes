@@ -25,6 +25,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatGridListModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,

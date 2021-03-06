@@ -11,7 +11,7 @@ export class CommonService {
   baseURL = 'http://localhost:3000/'
 
   getRecipe(id){
-    return this.http.get(`${this.baseURL}recipes/${id}`)
+    return this.http.get(`${this.baseURL}recipeByid/${id}`)
 
   }
  

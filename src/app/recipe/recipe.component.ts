@@ -12,16 +12,18 @@ export class RecipeComponent implements OnInit {
   constructor(private commonService: CommonService, private router: Router) { }
   retrivedRecipe;
   allRecipes;
+  ingredientsList:any = [];
 
   ngOnInit(): void {
     this.getAll();
-    // this.getRecipe(1001);
+    this.getRecipe(10011);
   }
 
   getAll(){
     this.commonService.getAllRecipes().subscribe(result => {
       this.allRecipes = result;
       console.log(this.allRecipes);
+      
     })
   
   }

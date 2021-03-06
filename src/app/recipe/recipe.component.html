@@ -1,22 +1,20 @@
 <div class="container">
-    <div class="middle-container"  *ngFor="let recipe of allRecipes">
-        <mat-grid-list cols="2" rowHeight="2:1"  *ngFor="let item of recipe.NorthIndian">
+    <div class="middle-container" >
+        <mat-grid-list cols="2" rowHeight="2:1">
             <mat-grid-tile>
-                <img [src]="item.starter[0].imgPath">
+                <img [src]="retrivedRecipe.imgPath">
             </mat-grid-tile>
             <mat-grid-tile>
                 <div class="content">
                     <div >
                         <div  >
-                            <h2>{{item.starter[0].dishName}}</h2>
-                            <h6>Rs. {{item.starter[0].price}}</h6>
+                            <h2>{{retrivedRecipe.dishName}}</h2>
+                            <h6>Rs. {{retrivedRecipe.price}}</h6>
                             <div>
-                                <p>{{item.starter[0].description}}</p>
+                                <p>{{retrivedRecipe.description}}</p>
                                 <br><h6>Ingredients</h6>
                                 <ul>
-                                    <li>Paneer</li>
-                                    <li>Corn Flour</li>
-                                    <li>Olive Oil</li>
+                                    <li *ngFor="let ingredient of retrivedRecipe.ingredients">{{ingredient}}</li>
                                 </ul>
                             </div>
                         </div>

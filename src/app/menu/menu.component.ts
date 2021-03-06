@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {MatAccordion} from '@angular/material/expansion';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-menu',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
-  constructor() { }
-
+  @ViewChild(MatAccordion) accordion: MatAccordion;
+  constructor(private service: CommonService) { }
+  menuItems:any;
   ngOnInit(): void {
+    this.getMenuItems();
   }
 
+
+  getMenuItems () {
+    this.service.getAllRecipes().subscribe(res => {
+      console.log('menu:', res)
+      this.menuItems = res;
+    })
+  }
 }

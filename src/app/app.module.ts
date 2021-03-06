@@ -8,11 +8,11 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { RecipeComponent } from './recipe/recipe.component';
-import {MatGridListModule} from '@angular/material/grid-list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     MatToolbarModule,
     MatIconModule,
+    MatCardModule,
+    MatGridListModule,
     HttpClientModule
   ],
   providers: [],

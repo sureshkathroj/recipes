@@ -20,6 +20,10 @@ body {
   font-size: 22px;
 
 }
+.mat-typography li, .mat-typography p{
+    font-size: 16px;
+    line-height: 24px;
+}
 
 .middle-container {
   max-width: 1600px;

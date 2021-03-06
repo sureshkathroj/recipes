@@ -2,53 +2,79 @@
     <button mat-button (click)="accordion.openAll()">Expand All</button>
     <button mat-button (click)="accordion.closeAll()">Collapse All</button>
   </div>
+  
   <mat-accordion class="example-headers-align" multi>
     <mat-expansion-panel *ngFor="let item of menuItems">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          North Indian
+        </mat-panel-title>
+        
+      </mat-expansion-panel-header>
+      <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>
-            NorthIndian
+            Starter
           </mat-panel-title>
           
         </mat-expansion-panel-header>
-    
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Starter
-                  <div *ngFor="let product of item.NorthIndian">
-                    <div *ngFor="let ind of product.starter">
-                      <span>{{ind.dishName}}</span>
-                    <span>{{ind.price}}</span>
-                    </div>
-                  </div>
-
-              </mat-panel-title>
-              
-            </mat-expansion-panel-header>
-        
-           <!-- item -->
-           <mat-panel-title>
-               Main Course
-           <div *ngFor="let product of item.NorthIndian">
-            <div *ngFor="let ind of product.mainCource">
+        <div *ngFor="let product of item.NorthIndian">
+            <div *ngFor="let ind of product.starter">
               <span>{{ind.dishName}}</span>
             <span>{{ind.price}}</span>
             </div>
           </div>
-        </mat-panel-title>
-          </mat-expansion-panel>
-      </mat-expansion-panel>
-   
-  
-    <!-- <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Main course
+            </mat-panel-title>
+            
+          </mat-expansion-panel-header>
+          <div *ngFor="let product of item.NorthIndian">
+              <div *ngFor="let ind of product.mainCource">
+                <span>{{ind.dishName}}</span>
+              <span>{{ind.price}}</span>
+              </div>
+            </div>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+  <mat-expansion-panel *ngFor="let item of menuItems">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        South Indian
+      </mat-panel-title>
+      
+    </mat-expansion-panel-header>
+    <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          South Indian
+          Starter
         </mat-panel-title>
         
       </mat-expansion-panel-header>
+      <div *ngFor="let product of item.SouthIndian">
+          <div *ngFor="let ind of product.starter">
+            <span>{{ind.dishName}}</span>
+          <span>{{ind.price}}</span>
+          </div>
+        </div>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Main course
+            </mat-panel-title>
+            
+          </mat-expansion-panel-header>
+          <div *ngFor="let product of item.SouthIndian">
+              <div *ngFor="let ind of product.mainCource">
+                <span>{{ind.dishName}}</span>
+              <span>{{ind.price}}</span>
+              </div>
+            </div>
+  </mat-expansion-panel>
+</mat-expansion-panel>
   
-     starter
-    </mat-expansion-panel> -->
+  
+  
   </mat-accordion>
+  
   

@@ -1,21 +1,25 @@
 <div class="container">
-    <div class="middle-container">
-        <mat-grid-list cols="2" rowHeight="2:1">
+    <div class="middle-container"  *ngFor="let recipe of allRecipes">
+        <mat-grid-list cols="2" rowHeight="2:1"  *ngFor="let item of recipe.NorthIndian">
             <mat-grid-tile>
-                <img src="https://images.unsplash.com/photo-1580376259289-d9c7bee8beaf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fHN0YXJ0ZXJ8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60">
+                <img [src]="item.starter[0].imgPath">
             </mat-grid-tile>
             <mat-grid-tile>
                 <div class="content">
-                    <h2>Salmon with salad</h2>
-                    <h6>Rs. 300.00</h6>
-                    <div>
-                        <p>This Restaurant Style Tandoori Paneer Tikka is a popular and delicious tandoori where paneer (Indian cottage cheese cubes) are marinated in a spiced yogurt-based marinade, arranged on skewers and grilled in the oven.</p>
-                        <br><h6>Ingredients</h6>
-                        <ul>
-                            <li>Paneer</li>
-                            <li>Corn Flour</li>
-                            <li>Olive Oil</li>
-                        </ul>
+                    <div >
+                        <div  >
+                            <h2>{{item.starter[0].dishName}}</h2>
+                            <h6>Rs. {{item.starter[0].price}}</h6>
+                            <div>
+                                <p>{{item.starter[0].description}}</p>
+                                <br><h6>Ingredients</h6>
+                                <ul>
+                                    <li>Paneer</li>
+                                    <li>Corn Flour</li>
+                                    <li>Olive Oil</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </mat-grid-tile>

@@ -6,7 +6,7 @@
     <mat-expansion-panel *ngFor="let item of menuItems">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            NorthIndian
+            {{item}}
           </mat-panel-title>
           
         </mat-expansion-panel-header>
@@ -14,7 +14,7 @@
         <mat-expansion-panel>
             <mat-expansion-panel-header>
               <mat-panel-title>
-                Starter
+                {{item.starter}}
               </mat-panel-title>
               
             </mat-expansion-panel-header>

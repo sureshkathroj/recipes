@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
 
   getMenuItems () {
     this.service.getAllRecipes().subscribe(res => {
-      console.log('menu:', res)
+      console.log('menu:', res.)
       this.menuItems = res;
     })
   }

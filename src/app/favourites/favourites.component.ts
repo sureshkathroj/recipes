@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common.service';
+import { Favourites } from '../favourites';
 
 @Component({
   selector: 'app-favourites',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavouritesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service: CommonService) { }
+  favourites: Favourites[];
   ngOnInit(): void {
+    this.getFavourites();
+  }
+
+  getFavourites () {
+    this.service.getFavourites().subscribe(res => {
+      this.favourites = res;
+      console.log(this.favourites);
+    })
   }
 
 }

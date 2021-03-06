@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatAccordion} from '@angular/material/expansion';
+import { Router } from '@angular/router';
 import { CommonService } from '../common.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { CommonService } from '../common.service';
 })
 export class MenuComponent implements OnInit {
   @ViewChild(MatAccordion) accordion: MatAccordion;
-  constructor(private service: CommonService) { }
+  constructor(private service: CommonService, private router: Router) { }
   menuItems:any;
   ngOnInit(): void {
     this.getMenuItems();
@@ -21,5 +22,9 @@ export class MenuComponent implements OnInit {
       console.log('menu:', res)
       this.menuItems = res;
     })
+  }
+
+   menuItem(id:number){
+    this.router.navigate(['/recipe', id]);
   }
 }

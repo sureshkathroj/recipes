@@ -17,7 +17,7 @@
                 Starter
                   <div *ngFor="let product of item.NorthIndian">
                     <div *ngFor="let ind of product.starter">
-                      <span>{{ind.dishName}}</span>
+                      <span (click)="menuItem(ind.id)">{{ind.dishName}}</span>
                     <span>{{ind.price}}</span>
                     </div>
                   </div>
@@ -31,7 +31,7 @@
                Main Course
            <div *ngFor="let product of item.NorthIndian">
             <div *ngFor="let ind of product.mainCource">
-              <span>{{ind.dishName}}</span>
+              <span (click)="menuItem(ind.id)">{{ind.dishName}}</span>
             <span>{{ind.price}}</span>
             </div>
           </div>

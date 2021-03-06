@@ -12,7 +12,7 @@ const routes: Routes = [
     path:'menu',component:MenuComponent
   },
   {
-    path:"recipe",component:RecipeComponent
+    path:"recipe/:id",component:RecipeComponent
   },
   {
     path:"favourites",component:FavouritesComponent
